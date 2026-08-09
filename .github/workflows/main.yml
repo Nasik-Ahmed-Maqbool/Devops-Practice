@@ -1,0 +1,25 @@
+name: Bootcamp_2020 Urdu
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    # run a single command using the runner shell
+    - name: Installing Node
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: 24.19.0 
+    # run a set of command using the runner shell
+    - name: Installing surge
+      run: npm install --global surge
+    - name: deploying using surge
+      run: surge ./ bootcamp_index.surge.sh --token ${{secrets.surge_tokens}} 
