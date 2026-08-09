@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+ 
+
+.portfolio-sec{
+    margin: 4rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 40%;
+    height: 100vh;
+    margin-top: 5rem;
+    border-left: 4px solid #456645;
+    border-bottom: 3px solid #f00606;
+}
+
+.portfolio-sec .content{
+    position: relative;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    
+} 
+
+.portfolio-sec .content span{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-between;
+}
+.portfolio-sec .content h1{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-between;
+    margin: .5rem;
+    font-weight: bolder;
+}
+
+
+.portfolio-sec .content p{
+    font-size: 20px;
+    font-family: Georgia;
+    justify-content: space-between;
+}
+
+
+.portfolio-sec .pic img{
+    width: 90%;
+    object-fit: cover;
+}
+
+.portfolio-sec .pic{
+    position: relative;
+    right: 0;
+    overflow: hidden;
+}
+
+
+.portfolio-sec h4{
+    position: absolute;
+   
+    left: 10px;
+    font-size: 30px;
+}
+
+
+.portfolio-sec .para {
+    position: absolute;
+    bottom: -80px;
+    left: 10px;
+    font-size: 10px;
+    text-align: left;
+    text-transform: lowercase;
+}
+
+.footer_social_ li{
+	margin-bottom: 0.7rem;
+}
+
+.footer_social_ li a{
+	color: aliceblue;
+}
+.footer_social_ li a:hover{
+	text-decoration: underline;
+}
+
+.footer_social_{
+    position: absolute;
+    bottom: -150px;
+	display: flex;
+	gap: 1rem;
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+
+
+@media(max-width:600px){
+
+.portfolio-sec{
+    margin: 4rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100vh;
+    margin-top: 5rem;
+    border-left: 4px solid #456645;
+    border-bottom: 3px solid #f00606;
+}
+}

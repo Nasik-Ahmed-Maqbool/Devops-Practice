@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none; 
+    list-style: none;
+    }
+ 
+body{
+    min-height: 100vh;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.containerx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+     
+    }
+
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    
+    width: 100vw;
+    pointer-events: none;
+    object-fit: cover;
+    
+}
+
+.content{
+    position: relative;
+    z-index: 1;
+    max-width: 100vw;  
+    margin: 0 auto;
+    text-align: center;
+}
+  
+.content h1{
+    margin: 0;
+    padding: 0;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.content p{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.about-school{
+    
+    
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.about-school .owner{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.about-school .owner img{
+    margin: 10px;
+    position: relative;
+    margin-top: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+.description{
+    display: block;
+    margin: 3rem;
+    padding: 2rem;
+    background-color: rgb(31, 34, 211);
+    border-left: 3px solid yellow;
+}
+
+.description p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.description span{
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+
+.team h2{
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+}
+
+.team { 
+    margin-bottom: 20px;
+	background: var(--color-bg1);
+	box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
+}
+
+.team_container{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 2rem;
+}
+
+.team_member{
+	background: rgb(199, 77, 199);
+	padding: 0;
+	border: 1px solid transparent;
+	position: relative;
+	overflow: hidden;
+}
+
+.team_member:hover{
+	background: transparent;
+	border-color: #656;
+}
+
+.team_member img{
+	width: 100%;
+	height: 100%;
+	filter: saturate(1);
+}
+.team_member:hover img{
+	filter: saturate(1);
+}
+
+.team_member_info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	text-align: center;
+	display: flex;
+	color: #fff;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: 0.25s;
+}
+
+.team_member_info:hover{
+	opacity: 1;
+}
+
+.team_member_info > *{
+	transform: translateY(20px);
+	transition: 0.25s;
+}
+
+.team_member_info:hover > *{
+	transform: translateY(0);
+}
+
+.team_member_info_blur {
+	backdrop-filter: blur(5px);
+}
+
+
+.image_title{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.image_description {
+	font-size: 1.25em;
+	margin-top: 0.25em;
+	color: var(--color-light);
+}
+
+@media (max-width: 600px){
+    .containerx {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        overflow: hidden;
+        
+        }
+    
+    
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: fit-content;
+        pointer-events: none;
+        object-fit: cover;
+        
+    }
+
+
+    .about-school{
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .containerx {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 350px;
+        margin: 0 auto;
+        overflow: hidden;
+        }
+    
+    
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        pointer-events: none;
+        object-fit: cover;
+        
+    }
+
+    .content h1{
+        margin: 0;
+        padding: 0;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    
+    .content p{
+        font-size: 1rem;
+        color: #fff;
+    }
+
+    .team_container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+}

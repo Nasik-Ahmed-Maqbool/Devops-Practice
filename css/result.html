@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-Protected Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #password-form {
+            display: none;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        #password-input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        #submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Protected Link</h2>
+
+    <form id="password-form">
+        <label for="password-input">Enter Password:</label>
+        <input type="password" id="password-input" required>
+        <br>
+        <button type="button" id="submit-button" onclick="checkPassword()">Submit</button>
+    </form>
+
+    <a href="C:/Users/Acer/Documents/ANEES.pdf" id="protected-link" style="display: none;"> protected link</a>
+
+    <script>
+        function checkPassword() {
+            var password = "1234"; // Change this to your desired password
+            var userInput = document.getElementById("password-input").value;
+
+            if (userInput === password) {
+                document.getElementById("password-form").style.display = "none";
+                document.getElementById("protected-link").style.display = "inline";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+
+</body>
+</html>
