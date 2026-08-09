@@ -1,4 +1,4 @@
-name: Bootcamp_2020 Urdu
+name: Devops-Practice-1
 
 on:
   push:
@@ -22,4 +22,4 @@ jobs:
     - name: Installing surge
       run: npm install --global surge
     - name: deploying using surge
-      run: surge ./ bootcamp_index.surge.sh --token ${{secrets.surge_tokens}} 
+      run: surge ./ devops-Practice-1.surge.sh --token ${{secrets.Devops-Practice-1}} 
